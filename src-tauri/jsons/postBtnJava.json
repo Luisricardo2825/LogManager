@@ -1,0 +1,32 @@
+{
+  "serviceName": "DatasetSP.save",
+  "requestBody": {
+    "dataSetID": "007",
+    "entityName": "BotaoAcao",
+    "standAlone": false,
+    "fields": [
+      "IDBTNACAO",
+      "DESCRICAO",
+      "TIPO",
+      "NOMEINSTANCIA",
+      "RESOURCEID",
+      "CONFIG",
+      "CODMODULO",
+      "ORDEM",
+      "CONTROLAACESSO",
+      "TECLAATALHO"
+    ],
+    "records": [
+      {
+        "foreignKey": { "NOMEINSTANCIA": "ArquivoModulo" },
+        "values": {
+          "1": "Btn teste",
+          "2": "RJ",
+          "5": "<actionConfig><javaCall codModulo=\"${{codModulo}}\" className=\"BtnGetLog\" entityName=\"ArquivoModulo\" refreshType=\"NONE\" txManual=\"false\"/><params></params></actionConfig>"
+        }
+      }
+    ],
+    "txProperties": { "i18n": "disabled" },
+    "ignoreListenerMethods": ""
+  }
+}

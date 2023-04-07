@@ -1,0 +1,12 @@
+{
+  "serviceName": "ActionButtonsSP.executeJava",
+  "requestBody": {
+    "javaCall": {
+      "actionID": "${{CODBTN}}",
+      "refreshType": "SEL",
+      "params": {
+        "param": []
+      }
+    }
+  }
+}

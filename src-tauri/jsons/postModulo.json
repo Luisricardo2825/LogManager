@@ -1,0 +1,21 @@
+{
+  "serviceName": "DatasetSP.save",
+  "requestBody": {
+    "dataSetID": "00S",
+    "entityName": "ArquivoModulo",
+    "standAlone": false,
+    "fields": ["CODMODULO", "CODJAR", "DESCRICAO", "ARQUIVO"],
+    "records": [
+      {
+        "foreignKey": {
+          "CODMODULO": "${{codModulo}}"
+        },
+        "values": {
+          "2": "${{fileName}}",
+          "3": "$file.session.key{${{moduleId}}}"
+        }
+      }
+    ],
+    "ignoreListenerMethods": ""
+  }
+}

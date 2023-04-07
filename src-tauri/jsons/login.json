@@ -1,0 +1,14 @@
+{
+    "serviceName": "MobileLoginSP.login",
+    "requestBody": {
+        "NOMUSU": {
+            "$": "${{username}}"
+        },
+        "INTERNO": {
+            "$": "${{password}}"
+        },
+        "KEEPCONNECTED": {
+            "$": "S"
+        }
+    }
+}
