@@ -10,24 +10,25 @@ Faça o dowload de uma das [releases](https://github.com/Luisricardo2825/LogMana
 
 Após o download e instalação de uma das opçoes dispostas em [releases](https://github.com/Luisricardo2825/LogManager/releases).
 
-Execute o programa e dirija-se até a tela "Adicionar Jar":
-[]("https://github.com/Luisricardo2825/LogManager/tree/master/images/add_env.png")
+#### Execute o programa e dirija-se até a tela "Adicionar Jar":
+![](https://raw.githubusercontent.com/Luisricardo2825/LogManager/main/images/add_env_toast.png)
 
-```shell
-upjar <caminho>
-```
+### Selecione o ambiente que deseja visualizar o log:
+![](https://raw.githubusercontent.com/Luisricardo2825/LogManager/main/images/select_env.png)
 
-## Parametros do arquivo de configuração
-
-| Parâmetro      | Tipo     | Descrição                                          |
-| :------------- | :------- | :------------------------------------------------- |
-| `url`          | `string` | **Obrigatório**. Url da base                       |
-| `user`         | `string` | **Obrigatório**. Usuário para login                |
-| `password`     | `string` | **Obrigatório**. Senha para login                  |
-| `jarFilePath`  | `string` | **Obrigatório**. Caminho do jar a ser enviado      |
-| `resourceId`   | `string` | **Obrigatório**. identificador do modulo           |
-| `resourceDesc` | `string` | **Obrigatório**. Descrição do modulo a ser criado. |
+### Selecione a opção `Log Server` e o log do ambiente selecionado será exibido:
+![](https://raw.githubusercontent.com/Luisricardo2825/LogManager/main/images/log_server.png)
 
 ## Autores
 
 - Ricardo Alves ([@Luisricardo2825](https://github.com/Luisricardo2825))
+
+## FAQ
+
+#### Como é realizado a consulta?
+
+No momento em que o ambiente é adicionado, é criado na base um `modulo java` com o identificador `br.com.ricardo.utilityLib`, que possui o binario [UtilityLibJava.jar](https://github.com/Luisricardo2825/LogManager/blob/main/src-tauri/jsons/UtilityLibJava.jar). É criado também um botão de ação com a descrição `Utility lib`(Encontrado na instacia `ArquivoModulo`) a ser chamado pelo Manager via API, no qual é responsável por retornar o log do servidor.
+
+#### Como o ambiente é armazenado?
+
+O ambiente configurado/adicionado é salvo dentro do [localStorage](https://developer.mozilla.org/pt-BR/docs/Web/API/Window/localStorage), não sendo salvo em qualquer outro lugar ou arquivo, onde, caso o `localStorage` seja limpo, irá também remover todos os ambientes configurados.
