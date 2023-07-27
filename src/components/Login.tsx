@@ -124,7 +124,16 @@ export default function Login() {
         position: "top",
       });
     } catch (e) {
-      console.error(e);
+      const json = JSON.parse(e || "{}");
+      const retBody = JSON.parse(json?.retBody || "{}");
+      toast({
+        title: "Erro",
+        description: "" + retBody?.statusMessage,
+        status: "error",
+        duration: 5000,
+        isClosable: true,
+        position: "top",
+      });
     }
   };
   return (
