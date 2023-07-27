@@ -20,9 +20,9 @@
       {
         "foreignKey": { "NOMEINSTANCIA": "ArquivoModulo" },
         "values": {
-          "1": "Btn teste",
+          "1": "${{descBtn}}",
           "2": "RJ",
-          "5": "<actionConfig><javaCall codModulo=\"${{codModulo}}\" className=\"BtnGetLog\" entityName=\"ArquivoModulo\" refreshType=\"NONE\" txManual=\"false\"/><params></params></actionConfig>"
+          "5": "<actionConfig><javaCall codModulo=\"${{codModulo}}\" className=\"BtnRunQuery\" entityName=\"ArquivoModulo\" refreshType=\"NONE\" txManual=\"false\"/><params></params></actionConfig>"
         }
       }
     ],

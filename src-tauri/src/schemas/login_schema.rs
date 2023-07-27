@@ -17,7 +17,7 @@ pub struct ResponseBody {
     pub call_id: CallId,
     pub jsessionid: Jsessionid,
     #[serde(rename = "kID")]
-    pub k_id: KId,
+    pub k_id: Option<KId>,
     pub idusu: Idusu,
 }
 

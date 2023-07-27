@@ -46,7 +46,8 @@
         "signingIdentity": null
       },
       "resources": [
-        "jsons/*"
+        "jsons/*",
+        "../lib/*"
       ],
       "shortDescription": "",
       "targets": "all",

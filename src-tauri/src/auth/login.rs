@@ -18,7 +18,7 @@ pub struct LoginError {
 pub async fn login(url: String, access_data: AccessData) -> Result<LoginRet, LoginError> {
     let get_login = post_login(url, access_data)
         .await
-        .expect("Error getting data");
+        .expect("{\"message\":\"Error getting login data\"}");
     let client = get_login.1;
 
     let data = get_login.0;

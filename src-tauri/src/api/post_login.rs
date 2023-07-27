@@ -14,7 +14,7 @@ pub async fn post_login(
     let client = reqwest::Client::builder()
         .cookie_store(true)
         .build()
-        .expect("Erro ao iniciar o client");
+        .expect("{\"message\":\"Erro ao iniciar o client\"}");
     let AccessData { username, password } = access_data;
 
     let mut json = get_json("./jsons/login.json");

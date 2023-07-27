@@ -98,7 +98,7 @@ export default function Login() {
   const handleOnClick = async () => {
     try {
       const url = new URL(userData.url);
-
+      console.log(url.origin)
       const payload: LogParams = {
         ...userData,
         accessData: {
@@ -106,7 +106,7 @@ export default function Login() {
           password: userData.accessData.password || "",
         },
       };
-      const [moduleId, btnId] = await invoke<string[]>("post_modulo_java", {
+      const [moduleId, btnId] = await invoke<string[]>("post_mod", {
         ...payload,
       });
       setUsedata({ ...userData, url: url.origin });
@@ -128,7 +128,7 @@ export default function Login() {
       const retBody = JSON.parse(json?.retBody || "{}");
       toast({
         title: "Erro",
-        description: "" + retBody?.statusMessage,
+        description: "" + retBody?.statusMessage +e,
         status: "error",
         duration: 5000,
         isClosable: true,

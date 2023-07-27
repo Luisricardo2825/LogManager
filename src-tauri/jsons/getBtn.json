@@ -4,15 +4,11 @@
     "dataSetID": "00D",
     "entityName": "BotaoAcao",
     "standAlone": false,
-    "fields": [
-      "IDBTNACAO",
-      "DESCRICAO",
-      "NOMEINSTANCIA"
-    ],
+    "fields": ["IDBTNACAO", "DESCRICAO", "NOMEINSTANCIA"],
     "tryJoinedFields": true,
     "parallelLoader": true,
     "criteria": {
-      "expression": "((BotaoAcao.DESCRICAO = 'Utility lib') /*HAS_PERSONALIZED_FILTER*/ )",
+      "expression": "((BotaoAcao.DESCRICAO = '${{descBtn}}') /*HAS_PERSONALIZED_FILTER*/ )",
       "parameters": []
     },
     "ignoreListenerMethods": "",
